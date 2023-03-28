@@ -18,6 +18,8 @@ npm install extensionsjs
 yarn add extensionsjs 
 ```
 
+### Config after install
+
 **Typescript | EsModule**
 ```typescript
 import "extensionsjs/lib";
