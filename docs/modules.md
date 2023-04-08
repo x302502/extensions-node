@@ -1,23 +1,21 @@
-[extensionsjs](README.md) / Modules
-
 # extensionsjs
 
 ## Table of contents
 
 ### Modules
 
-- [array](modules/array.md)
-- [array/array.contructor](modules/array_array_contructor.md)
-- [array/array.prototype](modules/array_array_prototype.md)
-- [date](modules/date.md)
-- [date/date.contructor](modules/date_date_contructor.md)
-- [date/date.prototype](modules/date_date_prototype.md)
-- [object](modules/object.md)
-- [object/object.contructor](modules/object_object_contructor.md)
-- [object/object.prototype](modules/object_object_prototype.md)
-- [promise](modules/promise.md)
-- [promise/promise.contructor](modules/promise_promise_contructor.md)
-- [promise/promise.prototype](modules/promise_promise_prototype.md)
-- [string](modules/string.md)
-- [string/string.contructor](modules/string_string_contructor.md)
-- [string/string.prototype](modules/string_string_prototype.md)
+- [array](../wiki/array)
+- [array/array.contructor](../wiki/array.array.contructor)
+- [array/array.prototype](../wiki/array.array.prototype)
+- [date](../wiki/date)
+- [date/date.contructor](../wiki/date.date.contructor)
+- [date/date.prototype](../wiki/date.date.prototype)
+- [object](../wiki/object)
+- [object/object.contructor](../wiki/object.object.contructor)
+- [object/object.prototype](../wiki/object.object.prototype)
+- [promise](../wiki/promise)
+- [promise/promise.contructor](../wiki/promise.promise.contructor)
+- [promise/promise.prototype](../wiki/promise.promise.prototype)
+- [string](../wiki/string)
+- [string/string.contructor](../wiki/string.string.contructor)
+- [string/string.prototype](../wiki/string.string.prototype)

@@ -1,16 +1,14 @@
-[extensionsjs](../README.md) / [Modules](../modules.md) / [promise/promise.contructor](../modules/promise_promise_contructor.md) / PromiseConstructor
-
 # Interface: PromiseConstructor
 
-[promise/promise.contructor](../modules/promise_promise_contructor.md).PromiseConstructor
+[promise/promise.contructor](../wiki/promise.promise.contructor).PromiseConstructor
 
 ## Table of contents
 
 ### Methods
 
-- [allObject](promise_promise_contructor.PromiseConstructor.md#allobject)
-- [retry](promise_promise_contructor.PromiseConstructor.md#retry)
-- [when](promise_promise_contructor.PromiseConstructor.md#when)
+- [allObject](../wiki/promise.promise.contructor.PromiseConstructor#allobject)
+- [retry](../wiki/promise.promise.contructor.PromiseConstructor#retry)
+- [when](../wiki/promise.promise.contructor.PromiseConstructor#when)
 
 ## Methods
 
@@ -30,7 +28,7 @@
 
 #### Defined in
 
-[promise/promise.contructor.ts:20](https://github.com/x302502/extensions-node/blob/9dfce28/src/promise/promise.contructor.ts#L20)
+[promise/promise.contructor.ts:20](https://github.com/x302502/extensions-node/blob/59eb6dc/src/promise/promise.contructor.ts#L20)
 
 ___
 
@@ -58,7 +56,7 @@ ___
 
 #### Defined in
 
-[promise/promise.contructor.ts:21](https://github.com/x302502/extensions-node/blob/9dfce28/src/promise/promise.contructor.ts#L21)
+[promise/promise.contructor.ts:21](https://github.com/x302502/extensions-node/blob/59eb6dc/src/promise/promise.contructor.ts#L21)
 
 ___
 
@@ -78,4 +76,4 @@ ___
 
 #### Defined in
 
-[promise/promise.contructor.ts:19](https://github.com/x302502/extensions-node/blob/9dfce28/src/promise/promise.contructor.ts#L19)
+[promise/promise.contructor.ts:19](https://github.com/x302502/extensions-node/blob/59eb6dc/src/promise/promise.contructor.ts#L19)

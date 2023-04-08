@@ -18,10 +18,12 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "prepare": "yarn build",
-    "gen-docs": "typedoc --plugin typedoc-plugin-markdown --out docs src/**/*.ts"
+    "gen-docs": "typedoc --plugin typedoc-plugin-markdown --out docs src/**/*.ts",
+    "gen-docs-github": "npx typedoc --theme github-wiki src/**/*.ts"
   },
   "devDependencies": {
     "@types/node": "^18.15.10",
+    "typedoc-github-wiki-theme": "^1.0.1",
     "typedoc-plugin-markdown": "^3.14.0",
     "typescript": "^5.0.2"
   },
