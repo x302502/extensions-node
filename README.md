@@ -30,3 +30,6 @@ import "extensionsjs/lib";
 require("extensionsjs/lib");
 ```
 
+
+### Full document in wiki github
+[FULL DOCUMENT](https://github.com/x302502/extensions-node/wiki)
