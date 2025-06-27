@@ -1,4 +1,4 @@
-export { }
+export {};
 declare global {
   interface StringConstructor {
     removeAccents(str: string): string;
@@ -31,7 +31,6 @@ function upperCase(str: string) {
 }
 
 String.removeAccents = (str: string) => {
-
   const AccentsMap = [
     "aàảãáạăằẳẵắặâầẩẫấậ",
     "AÀẢÃÁẠĂẰẲẴẮẶÂẦẨẪẤẬ",
@@ -46,7 +45,7 @@ String.removeAccents = (str: string) => {
     "uùủũúụưừửữứự",
     "UÙỦŨÚỤƯỪỬỮỨỰ",
     "yỳỷỹýỵ",
-    "YỲỶỸÝỴ"
+    "YỲỶỸÝỴ",
   ];
   for (let i = 0; i < AccentsMap.length; i++) {
     let re = new RegExp("[" + AccentsMap[i].substr(1) + "]", "g");
@@ -83,34 +82,35 @@ String.removeAccents = (str: string) => {
   // return str;
 };
 String.createInternalString = (text: string): string => {
-  return String.removeAccents(text.trim().toLowerCase()).split(" ").filter(item => !!item).join("_");
-}
+  return String.removeAccents(text.trim().toLowerCase())
+    .split(" ")
+    .filter((item) => !!item)
+    .join("_");
+};
 String.camelCaseToSnakeCase = (text: string): string => {
-  return String.removeAccents(text.trim()).split(/(?=[A-Z])/).join('_').toLowerCase()
-}
+  return String.removeAccents(text.trim())
+    .split(/(?=[A-Z])/)
+    .join("_")
+    .toLowerCase();
+};
 String.snakeCaseToCamelCase = (text: string): string => {
   if (text.startsWith("_")) {
-    text = text.substring(1)
+    text = text.substring(1);
   }
-  return String.removeAccents(text.trim()).replace(
-    /([-_][a-z])/g,
-    (group) => group.toUpperCase()
-      .replace('-', '')
-      .replace('_', '')
+  return String.removeAccents(text.trim()).replace(/([-_][a-z])/g, (group) =>
+    group.toUpperCase().replace("-", "").replace("_", "")
   );
-}
+};
 String.upperCaseFirstLetter = (str: string): string => {
   return str.charAt(0).toUpperCase() + str.slice(1);
-}
-
+};
 
 /**
  * Remove non-word chars.
  */
 String.removeNonWord = (str: string) => {
   return str.replace(/[^0-9a-zA-Z\xC0-\xFF \-]/g, "");
-}
-
+};
 
 String.toCamelCase = (str: string) => {
   let strMix = String.removeAccents(str);
@@ -119,43 +119,42 @@ String.toCamelCase = (str: string) => {
     .replace(/\s[a-z]/g, upperCase) //convert first char of each word to UPPERCASE
     .replace(/\s+/g, "") //remove spaces
     .replace(/^[A-Z]/g, lowerCase); //convert first char to lowercase
-
-}
-
+};
 
 /**
  * Add space between camelCase text.
  */
 String.unCamelCase = (str: string) => {
   return str.replace(/([a-z\xE0-\xFF])([A-Z\xC0\xDF])/g, "$1 $2").toLowerCase();
-}
+};
 /**
  * UPPERCASE first char of each word.
  */
 String.toProperCase = (str: string) => {
   return lowerCase(str).replace(/^\w|\s\w/g, upperCase);
-}
+};
 
 /**
  * camelCase + UPPERCASE first char
  */
 String.toPascalCase = (str: string) => {
-  return str.replace(new RegExp(/[-_]+/, 'g'), ' ')
-    .replace(new RegExp(/[^\w\s]/, 'g'), '')
+  return str
+    .replace(new RegExp(/[-_]+/, "g"), " ")
+    .replace(new RegExp(/[^\w\s]/, "g"), "")
     .replace(
-      new RegExp(/\s+(.)(\w+)/, 'g'),
+      new RegExp(/\s+(.)(\w+)/, "g"),
       ($1, $2, $3) => `${$2.toUpperCase() + $3.toLowerCase()}`
     )
-    .replace(new RegExp(/\s/, 'g'), '')
-    .replace(new RegExp(/\w/), s => s.toUpperCase());
-}
+    .replace(new RegExp(/\s/, "g"), "")
+    .replace(new RegExp(/\w/), (s) => s.toUpperCase());
+};
 
 /**
  * Remove HTML tags from string.
  */
 String.stripHtmlTags = (str: string) => {
   return str.replace(/<[^>]*>/g, "");
-}
+};
 
 /**
  * Remove non-printable ASCII chars
@@ -164,4 +163,4 @@ String.removeNonASCII = (str) => {
   // Matches non-printable ASCII chars -
   // http://en.wikipedia.org/wiki/ASCII#ASCII_printable_characters
   return str.replace(/[^\x20-\x7E]/g, "");
-}
+};

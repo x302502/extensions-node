@@ -1,9 +1,7 @@
 {
   "name": "extensionsjs",
-  "version": "1.1.9",
+  "version": "1.2.0",
   "license": "MIT",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
   "author": "thanhluan",
   "homepage": "https://github.com/x302502/extensions-node",
   "keywords": [
@@ -18,22 +16,39 @@
     "url": "https://github.com/x302502/extensions-node.git"
   },
   "readme": "README.md",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "files": [
     "lib"
   ],
+  "exports": {
+    ".": {
+      "import": "./lib/index.js",
+      "require": "./lib/index.js",
+      "types": "./lib/index.d.ts"
+    },
+    "./lib": {
+      "import": "./lib/index.js",
+      "require": "./lib/index.js",
+      "types": "./lib/index.d.ts"
+    }
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --config ./tests/jest.config.json --detectOpenHandles",
     "build": "tsc",
     "prepare": "yarn build",
     "gen-docs": "typedoc --plugin typedoc-plugin-markdown --out docs src/**/*.ts",
     "gen-docs-github": "npx typedoc --theme github-wiki src/**/*.ts"
   },
   "devDependencies": {
+    "@types/jest": "29.5.11",
     "@types/node": "^18.15.10",
+    "jest": "29.7.0",
+    "ts-jest": "29.1.1",
+    "typedoc": "^0.23.28",
     "typedoc-github-wiki-theme": "^1.0.1",
     "typedoc-plugin-markdown": "^3.14.0",
-    "typescript": "^5.0.2",
-    "typedoc": "^0.23.28"
+    "typescript": "5.2.2"
   },
   "dependencies": {}
 }
